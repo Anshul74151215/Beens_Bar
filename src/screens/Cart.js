@@ -1,5 +1,4 @@
 import React from 'react'
-// import Delete from '../icons8-trash.svg'
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 export default function Cart(props) {
   let data = useCart();
@@ -17,10 +16,7 @@ export default function Cart(props) {
   }
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
-    // console.log(data,localStorage.getItem("userEmail"),new Date())
     let response = await fetch("http://localhost:5000/api/orderData", {
-      // credentials: 'include',
-      // Origin:"http://localhost:3000/login",
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

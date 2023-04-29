@@ -1,5 +1,4 @@
 require("dotenv").config();
-const { Result } = require("express-validator");
 const mongoose = require('mongoose')
 
 const mongdb = async () => {
@@ -13,8 +12,6 @@ const mongdb = async () => {
                 global.foodData2 = data;
                 global.foodCategory = catData;
             })
-            // global.foodData2 = data;
-            // console.log();
         })
     })
 }

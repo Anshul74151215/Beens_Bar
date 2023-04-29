@@ -14,16 +14,7 @@ const reducer = (state, action) => {
         case "DROP":
             let empArray = []
             return empArray
-        case "UPDATE":
-            let arr = [...state]
-            arr.find((food, index) => {
-                if (food.id === action.id) {
-                    console.log(food.qty, parseInt(action.qty), action.price + food.price)
-                    arr[index] = { ...food, qty: parseInt(action.qty) + food.qty, price: action.price + food.price }
-                }
-                return arr
-            })
-            return arr
+
         default:
             console.log("Error in Reducer");
     }
